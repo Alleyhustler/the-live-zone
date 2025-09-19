@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Live Zone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .join-btn {
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .join-btn:hover {
+            background: #333333;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 8rem;
+        }
+
+        .hero-title {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #666666;
+            margin-bottom: 3rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .schedule {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid #000000;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+
+        .live-indicator {
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+        }
+
+        .watch-btn {
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 1.5rem 4rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 3rem;
+            transition: all 0.2s ease;
+        }
+
+        .watch-btn:hover {
+            background: #333333;
+            transform: translateY(-1px);
+        }
+
+        .stats {
+            margin-top: 8rem;
+            display: flex;
+            justify-content: center;
+            gap: 6rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666666;
+            font-weight: 400;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 3rem 0;
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: #666666;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: #000000;
+        }
+
+        .copyright {
+            color: #999999;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            header {
+                padding: 1.5rem;
+            }
+
+            main {
+                margin-top: 6rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 3rem;
+                margin-top: 6rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .schedule {
+                padding: 1rem 2rem;
+            }
+
+            .watch-btn {
+                padding: 1.25rem 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .stats {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">The Live Zone</a>
+            <a href="https://pump.fun/profile/HWzi4efcfaJTDEj5Vh5PPs9TFwFiqrFhg5m1R6xXws4S?tab=balances" class="join-btn">LIVE PUMPFUN</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <h1 class="hero-title">L-ZONE</h1>
+            <p class="hero-subtitle">Daily live-streaming with the biggest KOLs in the space</p>
+            
+            <div class="schedule">
+                <div class="live-indicator"></div>
+                <span>17:00 PM UTC</span>
+            </div>
+
+            <a href="https://pump.fun/profile/HWzi4efcfaJTDEj5Vh5PPs9TFwFiqrFhg5m1R6xXws4S?tab=balances" class="watch-btn">@TheDotZone</a>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Viewers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">KOLs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">365</span>
+                    <span class="stat-label">Days</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">© 2025 The Live Zone</div>
+            <div class="social-links">
+                <a href="https://x.com/LiveDotZone">𝕏</a>
+                <a href="https://pump.fun/profile/HWzi4efcfaJTDEj5Vh5PPs9TFwFiqrFhg5m1R6xXws4S?tab=balances">📺</a>
+                <a href="https://x.com/LiveDotZone">💬</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+            });
+        });
+
+        // Simple scroll effect for header
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
